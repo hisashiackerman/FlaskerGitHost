@@ -1,4 +1,4 @@
-import email
+
 from flask import Flask, render_template, flash
 from forms import UserForm
 from flask_sqlalchemy import SQLAlchemy
@@ -7,7 +7,8 @@ from datetime import datetime
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://zfldepccsydywe:199084877f6571c67b03c4b5ba0aa0fd6dc3a4db7e46bc54645bdcc01d9657ad@ec2-52-22-136-117.compute-1.amazonaws.com:5432/db00s6gbl9viqd'
 app.config['SECRET_KEY'] = "e07e5ecdb25b94b71947500f166ce38e"
 
 db = SQLAlchemy(app)
@@ -51,5 +52,3 @@ def users():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-# postgres: // xnwsoagdxqwpvb: cb3a4c2be3812668d6f394aee70c4ff1503b1ac716649c04be44c256cdcf7a6a@ec2-34-200-35-222.compute-1.amazonaws.com: 5432/d855s882nnrlrd
