@@ -50,5 +50,5 @@ def users():
     return render_template('user.html', form=form, name=name)
 
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
