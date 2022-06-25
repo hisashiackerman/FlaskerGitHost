@@ -24,7 +24,7 @@ class Users(db.Model):
         return '<Name %r>' % self.name
 
 
-@app.route("/")
+# @app.route("/")
 @app.route("/home")
 def index():
     anime_list = ["Attack on Titan", "Steins;Gate", "Fate Series"]
